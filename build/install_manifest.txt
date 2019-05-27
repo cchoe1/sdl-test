@@ -1,0 +1,2 @@
+/Users/cchoe/Documents/c/sdl/bin/Lesson0
+/Users/cchoe/Documents/c/sdl/bin/Lesson1
