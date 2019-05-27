@@ -3,6 +3,8 @@
 #include "lib/graph.h"
 #include "lib/point.h"
 #include "lib/context.h"
+#include "lib/panel.h"
+#include "lib/application.h"
 
 // The rate at which the window refreshes - 16 is roughly 62.5hz
 #define REFRESH_RATE_MS 16
@@ -17,10 +19,17 @@ void shutdown() {
 	SDL_Quit();
 }
 
-/**
- * Main
- */
-int main(int, char**){
+int main(int, char**)
+{
+  //Cgraph::Application app = new Application;
+  Cgraph::Application app;
+  SDL_Renderer* ren = app.initialize();
+  SDL_Texture* texture = app.get_texture();
+
+  Cgraph::Panel pan();
+
+  //panel.load_defaults();
+
   Cgraph::Context ctx(WINDOW_WIDTH, WINDOW_HEIGHT);
   Cgraph::Graph gr(ctx, GRAPH_MODE, GRAPH_WIDTH, GRAPH_HEIGHT);
   //gr.set_context(ctx);
@@ -29,18 +38,16 @@ int main(int, char**){
   //gr.set_x_axis();
   //gr.set_y_axis();
 
-
   /**
    * Main Loop 
    */
-  // @TODO: Move into Application class
   bool main_loop = true;
   while (main_loop)
   {
     //First clear the renderer
     SDL_RenderClear(ren);
     //Draw the texture
-    SDL_RenderCopy(ren, tex, NULL, NULL);
+    SDL_RenderCopy(ren, texture, NULL, NULL);
 
     SDL_SetRenderDrawColor(ren, 0, 0, 0, SDL_ALPHA_OPAQUE);
 
@@ -91,9 +98,10 @@ int main(int, char**){
   }
 
   /* Final leg of the program - close everything */
-  SDL_DestroyTexture(tex);
-  SDL_DestroyRenderer(ren);
-  SDL_DestroyWindow(win);
+  //SDL_DestroyTexture(tex);
+  //SDL_DestroyRenderer(ren);
+  //SDL_DestroyWindow(win);
   shutdown();
+  //delete app;
 	return 0;
 }

@@ -171,6 +171,33 @@ Lesson1/fast:
 	cd /Users/cchoe/Documents/c/sdl/build && $(MAKE) -f Lesson1/CMakeFiles/Lesson1.dir/build.make Lesson1/CMakeFiles/Lesson1.dir/build
 .PHONY : Lesson1/fast
 
+src/lib/application.o: src/lib/application.cpp.o
+
+.PHONY : src/lib/application.o
+
+# target to build an object file
+src/lib/application.cpp.o:
+	cd /Users/cchoe/Documents/c/sdl/build && $(MAKE) -f Lesson1/CMakeFiles/Lesson1.dir/build.make Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.o
+.PHONY : src/lib/application.cpp.o
+
+src/lib/application.i: src/lib/application.cpp.i
+
+.PHONY : src/lib/application.i
+
+# target to preprocess a source file
+src/lib/application.cpp.i:
+	cd /Users/cchoe/Documents/c/sdl/build && $(MAKE) -f Lesson1/CMakeFiles/Lesson1.dir/build.make Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.i
+.PHONY : src/lib/application.cpp.i
+
+src/lib/application.s: src/lib/application.cpp.s
+
+.PHONY : src/lib/application.s
+
+# target to generate assembly for a file
+src/lib/application.cpp.s:
+	cd /Users/cchoe/Documents/c/sdl/build && $(MAKE) -f Lesson1/CMakeFiles/Lesson1.dir/build.make Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.s
+.PHONY : src/lib/application.cpp.s
+
 src/lib/context.o: src/lib/context.cpp.o
 
 .PHONY : src/lib/context.o
@@ -224,6 +251,33 @@ src/lib/graph.s: src/lib/graph.cpp.s
 src/lib/graph.cpp.s:
 	cd /Users/cchoe/Documents/c/sdl/build && $(MAKE) -f Lesson1/CMakeFiles/Lesson1.dir/build.make Lesson1/CMakeFiles/Lesson1.dir/src/lib/graph.cpp.s
 .PHONY : src/lib/graph.cpp.s
+
+src/lib/panel.o: src/lib/panel.cpp.o
+
+.PHONY : src/lib/panel.o
+
+# target to build an object file
+src/lib/panel.cpp.o:
+	cd /Users/cchoe/Documents/c/sdl/build && $(MAKE) -f Lesson1/CMakeFiles/Lesson1.dir/build.make Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.o
+.PHONY : src/lib/panel.cpp.o
+
+src/lib/panel.i: src/lib/panel.cpp.i
+
+.PHONY : src/lib/panel.i
+
+# target to preprocess a source file
+src/lib/panel.cpp.i:
+	cd /Users/cchoe/Documents/c/sdl/build && $(MAKE) -f Lesson1/CMakeFiles/Lesson1.dir/build.make Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.i
+.PHONY : src/lib/panel.cpp.i
+
+src/lib/panel.s: src/lib/panel.cpp.s
+
+.PHONY : src/lib/panel.s
+
+# target to generate assembly for a file
+src/lib/panel.cpp.s:
+	cd /Users/cchoe/Documents/c/sdl/build && $(MAKE) -f Lesson1/CMakeFiles/Lesson1.dir/build.make Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.s
+.PHONY : src/lib/panel.cpp.s
 
 src/lib/point.o: src/lib/point.cpp.o
 
@@ -292,12 +346,18 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... Lesson1"
+	@echo "... src/lib/application.o"
+	@echo "... src/lib/application.i"
+	@echo "... src/lib/application.s"
 	@echo "... src/lib/context.o"
 	@echo "... src/lib/context.i"
 	@echo "... src/lib/context.s"
 	@echo "... src/lib/graph.o"
 	@echo "... src/lib/graph.i"
 	@echo "... src/lib/graph.s"
+	@echo "... src/lib/panel.o"
+	@echo "... src/lib/panel.i"
+	@echo "... src/lib/panel.s"
 	@echo "... src/lib/point.o"
 	@echo "... src/lib/point.i"
 	@echo "... src/lib/point.s"

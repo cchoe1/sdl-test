@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/application.cpp" "/Users/cchoe/Documents/c/sdl/build/Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.o"
   "/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/context.cpp" "/Users/cchoe/Documents/c/sdl/build/Lesson1/CMakeFiles/Lesson1.dir/src/lib/context.cpp.o"
   "/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/graph.cpp" "/Users/cchoe/Documents/c/sdl/build/Lesson1/CMakeFiles/Lesson1.dir/src/lib/graph.cpp.o"
+  "/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/panel.cpp" "/Users/cchoe/Documents/c/sdl/build/Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.o"
   "/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/point.cpp" "/Users/cchoe/Documents/c/sdl/build/Lesson1/CMakeFiles/Lesson1.dir/src/lib/point.cpp.o"
   "/Users/cchoe/Documents/c/sdl/Lesson1/src/main.cpp" "/Users/cchoe/Documents/c/sdl/build/Lesson1/CMakeFiles/Lesson1.dir/src/main.cpp.o"
   )

@@ -109,12 +109,40 @@ Lesson1/CMakeFiles/Lesson1.dir/src/lib/context.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lesson1.dir/src/lib/context.cpp.s"
 	cd /Users/cchoe/Documents/c/sdl/build/Lesson1 && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/context.cpp -o CMakeFiles/Lesson1.dir/src/lib/context.cpp.s
 
+Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.o: Lesson1/CMakeFiles/Lesson1.dir/flags.make
+Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.o: ../Lesson1/src/lib/application.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cchoe/Documents/c/sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.o"
+	cd /Users/cchoe/Documents/c/sdl/build/Lesson1 && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lesson1.dir/src/lib/application.cpp.o -c /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/application.cpp
+
+Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lesson1.dir/src/lib/application.cpp.i"
+	cd /Users/cchoe/Documents/c/sdl/build/Lesson1 && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/application.cpp > CMakeFiles/Lesson1.dir/src/lib/application.cpp.i
+
+Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lesson1.dir/src/lib/application.cpp.s"
+	cd /Users/cchoe/Documents/c/sdl/build/Lesson1 && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/application.cpp -o CMakeFiles/Lesson1.dir/src/lib/application.cpp.s
+
+Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.o: Lesson1/CMakeFiles/Lesson1.dir/flags.make
+Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.o: ../Lesson1/src/lib/panel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cchoe/Documents/c/sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.o"
+	cd /Users/cchoe/Documents/c/sdl/build/Lesson1 && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lesson1.dir/src/lib/panel.cpp.o -c /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/panel.cpp
+
+Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lesson1.dir/src/lib/panel.cpp.i"
+	cd /Users/cchoe/Documents/c/sdl/build/Lesson1 && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/panel.cpp > CMakeFiles/Lesson1.dir/src/lib/panel.cpp.i
+
+Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lesson1.dir/src/lib/panel.cpp.s"
+	cd /Users/cchoe/Documents/c/sdl/build/Lesson1 && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/panel.cpp -o CMakeFiles/Lesson1.dir/src/lib/panel.cpp.s
+
 # Object files for target Lesson1
 Lesson1_OBJECTS = \
 "CMakeFiles/Lesson1.dir/src/main.cpp.o" \
 "CMakeFiles/Lesson1.dir/src/lib/graph.cpp.o" \
 "CMakeFiles/Lesson1.dir/src/lib/point.cpp.o" \
-"CMakeFiles/Lesson1.dir/src/lib/context.cpp.o"
+"CMakeFiles/Lesson1.dir/src/lib/context.cpp.o" \
+"CMakeFiles/Lesson1.dir/src/lib/application.cpp.o" \
+"CMakeFiles/Lesson1.dir/src/lib/panel.cpp.o"
 
 # External object files for target Lesson1
 Lesson1_EXTERNAL_OBJECTS =
@@ -123,9 +151,11 @@ Lesson1/Lesson1: Lesson1/CMakeFiles/Lesson1.dir/src/main.cpp.o
 Lesson1/Lesson1: Lesson1/CMakeFiles/Lesson1.dir/src/lib/graph.cpp.o
 Lesson1/Lesson1: Lesson1/CMakeFiles/Lesson1.dir/src/lib/point.cpp.o
 Lesson1/Lesson1: Lesson1/CMakeFiles/Lesson1.dir/src/lib/context.cpp.o
+Lesson1/Lesson1: Lesson1/CMakeFiles/Lesson1.dir/src/lib/application.cpp.o
+Lesson1/Lesson1: Lesson1/CMakeFiles/Lesson1.dir/src/lib/panel.cpp.o
 Lesson1/Lesson1: Lesson1/CMakeFiles/Lesson1.dir/build.make
 Lesson1/Lesson1: Lesson1/CMakeFiles/Lesson1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cchoe/Documents/c/sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Lesson1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cchoe/Documents/c/sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Lesson1"
 	cd /Users/cchoe/Documents/c/sdl/build/Lesson1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Lesson1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

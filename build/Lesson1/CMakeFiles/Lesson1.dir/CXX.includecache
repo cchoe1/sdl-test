@@ -622,6 +622,18 @@ close_code.h
 
 /Library/Frameworks/SDL2.framework/Headers/close_code.h
 
+/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/application.cpp
+application.h
+/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/application.h
+iostream
+-
+SDL.h
+-
+
+/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/application.h
+SDL.h
+-
+
 /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/context.h
 
 /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/graph.h
@@ -632,6 +644,10 @@ context.h
 point.h
 /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/point.h
 vector
+-
+
+/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/panel.h
+SDL.h
 -
 
 /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/point.h
@@ -649,4 +665,8 @@ lib/point.h
 /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/point.h
 lib/context.h
 /Users/cchoe/Documents/c/sdl/Lesson1/src/lib/context.h
+lib/panel.h
+/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/panel.h
+lib/application.h
+/Users/cchoe/Documents/c/sdl/Lesson1/src/lib/application.h
 
