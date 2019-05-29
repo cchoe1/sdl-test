@@ -107,7 +107,6 @@ Graph Graph::draw_axes(SDL_Renderer* ren)
   int psy = pey - get_height();
 
   SDL_SetRenderDrawColor(ren, 200, 0, 200, SDL_ALPHA_OPAQUE);
-
   // y-axis
   SDL_RenderDrawLine(ren, psx, psy, psx, pey);
   // x-axis

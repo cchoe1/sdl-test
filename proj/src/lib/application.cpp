@@ -37,7 +37,7 @@ void Application::load_defaults(Context* ctx)
 
 void Application::load_texture()
 {
-  std::string imagePath = "/Users/cchoe/Documents/c/sdl/Lesson1/out1.bmp";
+  std::string imagePath = "/Users/cchoe/Documents/c/sdl/proj/out1.bmp";
   SDL_Surface *bmp = SDL_LoadBMP(imagePath.c_str());
   if (bmp == nullptr){
     //SDL_DestroyRenderer(ren);
@@ -47,6 +47,8 @@ void Application::load_texture()
     //return 1;
   }
 
+
+  SDL_SetRenderDrawColor(ren, 0, 0, 0, SDL_ALPHA_OPAQUE);
   SDL_Texture *tex = SDL_CreateTextureFromSurface(ren, bmp);
   SDL_FreeSurface(bmp);
   if (tex == nullptr){
