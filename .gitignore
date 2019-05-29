@@ -3,4 +3,8 @@
 *.swn
 *.log
 tags
+tags.lock
 **/tags
+
+build/
+bin/
