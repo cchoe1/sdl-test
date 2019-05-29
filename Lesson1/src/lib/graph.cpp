@@ -14,8 +14,6 @@ Graph::Graph(Context ctx, cgraph_mode m, int graph_width, int graph_height) : co
   gheight = graph_height;
   gwidth = graph_width;
 
-  printf("Mode = %d\n", m);
-
 }
 
 /* GETTERS */
@@ -86,8 +84,8 @@ Graph Graph::set_x_tick_count(int num)
 
 Graph Graph::set_y_tick_count(int num)
 {
-  //y_tick_count = num;
-  //set_y_ticks();
+  y_tick_count = num;
+  set_y_ticks();
   return *this;
 }
 
@@ -109,7 +107,6 @@ Graph Graph::draw_axes(SDL_Renderer* ren)
   int psy = pey - get_height();
 
   SDL_SetRenderDrawColor(ren, 200, 0, 200, SDL_ALPHA_OPAQUE);
-  //SDL_RenderDrawLine(ren, 100, 200, 300, 400);
 
   // y-axis
   SDL_RenderDrawLine(ren, psx, psy, psx, pey);
@@ -121,20 +118,33 @@ Graph Graph::draw_axes(SDL_Renderer* ren)
 
 Graph Graph::draw_ticks(SDL_Renderer* ren)
 {
-  int y_pos_start = context.get_window_height() + get_margin() - 10;
+  int x_pos_start = 0 + get_margin() - 10;
+  int x_pos_end = x_pos_start + 20;
+
+  int y_pos_start = context.get_window_height() - get_margin() - 10;
   int y_pos_end = y_pos_start + 20;
 
-  //for(std::vector<T>::iterator it = x_ticks.begin(); it != x_ticks.end(); ++it) {
-  //  /* std::cout << *it; ... */
-  //  std::cout << *it << std::endl;
-  //}
-  //std::cout << "HELLO WORLD" << std::endl;
   SDL_SetRenderDrawColor(ren, 200, 0, 200, SDL_ALPHA_OPAQUE);
+  // Draw x ticks
+  Point pt(0, 0);
+  pt.set_context(context);
   for ( auto i = x_ticks.begin(); i != x_ticks.end(); i++ ) {
-    std::cout << *i << std::endl;
-    Point pt(*i, 0);
-    int true_x = pt.get_true_x();
+    pt.set_x(*i);
+    int true_x = pt.get_true_x() + get_margin();
     SDL_RenderDrawLine(ren, true_x, y_pos_start, true_x, y_pos_end);
+  }
+
+  // Draw y ticks
+  Point pt_y(0, 0);
+  pt_y.set_context(context);
+  for ( auto i = y_ticks.begin(); i != y_ticks.end(); i++ ) {
+    printf("*i = %d\n", *i);
+    pt_y.set_y(*i);
+    int true_y = pt_y.get_true_y() - get_margin();
+    printf("True y = %d\n", pt_y.get_true_y());
+    printf("Adj y = %d\n", true_y);
+
+    SDL_RenderDrawLine(ren, x_pos_start, true_y, x_pos_end, true_y);
   }
   //while ((p++) != '\0') {
   //}
@@ -155,18 +165,22 @@ Graph Graph::set_x_ticks()
   int graph_width = gwidth;
   int increment = graph_width / x_tick_count;
   int position;
-  //printf("Graph width = %d\n", graph_width);
+
   for (position = 0; position <= graph_width; position += increment) {
     x_ticks.push_back(position);
-    printf("Tick added at x-coord: %d\n", position);
   }
-  printf("The tick at index 3: %d\n", x_ticks[3]);
-
   return *this;
 }
 
-//Graph Graph::set_y_ticks()
-//{
-//
-//  return *this;
-//}
+Graph Graph::set_y_ticks()
+{
+  int graph_height = gheight;
+  int increment = graph_height / y_tick_count;
+  int position;
+
+  for (position = 0; position <= graph_height; position += increment) {
+    y_ticks.push_back(position);
+    printf("Y tick added at %d\n", position);
+  }
+  return *this;
+}

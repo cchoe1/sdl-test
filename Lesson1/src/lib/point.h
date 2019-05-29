@@ -37,7 +37,8 @@ namespace Cgraph
 
 
     private:
-      Point cartesian(); /* Maps the TL-BR rendering style to a cartesian plane for easier understanding */
+      Point cartesianX(); /* Maps the TL-BR rendering style to a cartesian plane for easier understanding */
+      Point cartesianY(); /* Maps the TL-BR rendering style to a cartesian plane for easier understanding */
   };
 
 }

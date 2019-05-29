@@ -8,10 +8,11 @@
 
 // The rate at which the window refreshes - 16 is roughly 62.5hz
 #define REFRESH_RATE_MS 16
-#define WINDOW_WIDTH 640
-#define WINDOW_HEIGHT 480
+#define WINDOW_WIDTH 1024
+#define WINDOW_HEIGHT 768
 #define GRAPH_WIDTH 500
 #define GRAPH_HEIGHT 500
+#define GRAPH_MARGIN 100
 #define GRAPH_MODE Cgraph::cgraph_mode::timeseries
 
 void shutdown() {
@@ -22,19 +23,24 @@ void shutdown() {
 int main(int, char**)
 {
   //Cgraph::Application app = new Application;
+  Cgraph::Context ctx(WINDOW_WIDTH, WINDOW_HEIGHT);
+  Cgraph::Context* ctx_pointer = &ctx;
+
   Cgraph::Application app;
-  SDL_Renderer* ren = app.initialize();
+
+  // Hacky - need to contain this within the app class
+  SDL_Renderer* ren = app.initialize(ctx_pointer);
   SDL_Texture* texture = app.get_texture();
 
   Cgraph::Panel pan();
 
   //panel.load_defaults();
 
-  Cgraph::Context ctx(WINDOW_WIDTH, WINDOW_HEIGHT);
   Cgraph::Graph gr(ctx, GRAPH_MODE, GRAPH_WIDTH, GRAPH_HEIGHT);
   //gr.set_context(ctx);
-  gr.set_margin(50);
+  gr.set_margin(GRAPH_MARGIN);
   gr.set_x_tick_count(10);
+  gr.set_y_tick_count(20);
   //gr.set_x_axis();
   //gr.set_y_axis();
 
@@ -42,8 +48,7 @@ int main(int, char**)
    * Main Loop 
    */
   bool main_loop = true;
-  while (main_loop)
-  {
+  while (main_loop) {
     //First clear the renderer
     SDL_RenderClear(ren);
     //Draw the texture
@@ -77,18 +82,14 @@ int main(int, char**)
     //SDL_RenderDrawRect(ren, &rect2);
 
     SDL_Event event;
-    while(SDL_PollEvent(&event))
-    {
+    while(SDL_PollEvent(&event)) {
       //printf("Event \n");
-      switch(event.type)
-      {
+      switch(event.type) {
         case SDL_QUIT:
           main_loop = false;
           break;
       }
-
-      if(event.type == SDL_QUIT)
-      {
+      if(event.type == SDL_QUIT) {
         break;
       }
     }

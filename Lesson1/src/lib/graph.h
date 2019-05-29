@@ -58,7 +58,7 @@ namespace Cgraph
       cgraph_mode mode;
 
       Graph set_x_ticks();
-      //Graph set_y_ticks();
+      Graph set_y_ticks();
 
       /**
        * normalizeData()

@@ -1,9 +1,7 @@
 #include "application.h"
+#include "context.h"
 #include <iostream>
 #include <SDL.h>
-
-#define WINDOW_WIDTH 640
-#define WINDOW_HEIGHT 480
 
 using namespace Cgraph;
 
@@ -13,13 +11,13 @@ Application::~Application()
     SDL_DestroyWindow(win);
 }
 
-SDL_Renderer* Application::initialize()
+SDL_Renderer* Application::initialize(Context* ctx)
 {
 	if (SDL_Init(SDL_INIT_VIDEO) != 0){
 		std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
 	}
 
-  load_defaults();
+  load_defaults(ctx);
 
   return ren;
 }
@@ -29,10 +27,10 @@ SDL_Texture* Application::get_texture()
   return texture;
 }
 
-void Application::load_defaults()
+void Application::load_defaults(Context* ctx)
 {
   // Must load in this order so the correct variables are set
-  load_window();
+  load_window(ctx);
   load_renderer();
   load_texture();
 }
@@ -59,15 +57,19 @@ void Application::load_texture()
   texture = tex;
 }
 
-void Application::load_window()
+void Application::load_window(Context* ctx)
 {
-
-  SDL_Window *window = SDL_CreateWindow("Hello World!", 100, 100, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
+  SDL_Window *window = SDL_CreateWindow("Hello World!", 100, 100, ctx->get_window_width(), ctx->get_window_height(), SDL_WINDOW_SHOWN);
   if (window == nullptr){
     std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
+    throw "SDL_ERROR";
     //shutdown();
     //return 1;
   }
+  SDL_bool window_resizable = SDL_bool::SDL_TRUE;
+  SDL_SetWindowResizable(window, window_resizable);
+  SDL_SetWindowMaximumSize(window, 2000, 2000);
+
   win = window;
 }
 

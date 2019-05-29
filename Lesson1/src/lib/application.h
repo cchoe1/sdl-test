@@ -1,11 +1,15 @@
+#ifndef APPLICATION_H
+#define APPLICATION_H
+
 #include <SDL.h>
+#include "context.h"
 
 namespace Cgraph {
   class Application {
 
     public:
       ~Application();
-      SDL_Renderer* initialize(void);
+      SDL_Renderer* initialize(Context* ctx);
       SDL_Texture* get_texture();
 
     private:
@@ -14,9 +18,10 @@ namespace Cgraph {
       SDL_Texture* texture;
       SDL_Surface* surface;
 
-      void load_defaults();
-      void load_window();
+      void load_defaults(Context* ctx);
+      void load_window(Context* ctx);
       void load_renderer();
       void load_texture();
   };
 }
+#endif
